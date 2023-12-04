@@ -1,0 +1,38 @@
+
+-----------------------------------------------------
+						INCEPTION
+-----------------------------------------------------
+
+Docker compose 
+Docker image (name: corresponding service)
+Each service -> run in a dedicated container, own Docker files
+Docker files called by docker-compose.yml 
+
+Debian 11.0
+- NGINX - TLSv1.3
+- WordPress + php-fpm without NGINX
+- MariaDB without NGINX
+- Volume w/ WordPress database
+				⮑ 2 users, dont 1 admin (not name admin or alias)
+- 2nd Volume w/ WordPress website files
+	⮑ both volumes available in home/khuynh/data folder of host machine
+- docker-network: connection between containers
+
+- domain name points to local IP Address, khuynh.42.fr 
+
+/!\
+latest tag prohibited
+no password in Dockerfiles
+
+
+/OK\
+use environment variables
+.env file in root of srcs directory
+NGINX only entrypoint to infrastructure via port 443
+containers restart if crash
+
+-------------------------------------------------------
+
+Docker use: packing app and dependencies into one container in order to use one program on any OS
+Container = VM sans noyau, que l'appli et dependances de l'appli
+
