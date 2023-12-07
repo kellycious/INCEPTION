@@ -35,4 +35,3 @@ containers restart if crash
 
 Docker use: packing app and dependencies into one container in order to use one program on any OS
 Container = VM sans noyau, que l'appli et dependances de l'appli
-
