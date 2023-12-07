@@ -34,4 +34,8 @@ containers restart if crash
 -------------------------------------------------------
 
 Docker use: packing app and dependencies into one container in order to use one program on any OS
-Container = VM sans noyau, que l'appli et dependances de l'appli
+			creating the environment to deploy your code 
+Container: VM sans noyau, que l'appli et dependances de l'appli
+Compose: tool to define + run multi-container Docker app, use YAML file to configure app services
+Docker file: build images via the the instructions within 
+
