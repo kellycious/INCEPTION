@@ -36,6 +36,45 @@ containers restart if crash
 Docker use: packing app and dependencies into one container in order to use one program on any OS
 			creating the environment to deploy your code 
 Container: VM sans noyau, que l'appli et dependances de l'appli
-Compose: tool to define + run multi-container Docker app, use YAML file to configure app services
+Compose: tool to define + run multi-container Docker app, use YAML file to configure app services + build network automatically
 Docker file: build images via the the instructions within 
+
+Docker commands
+
+1/ ps: running containers
+	1.1/ -a : all previous ones
+2/ image: all images installed locally
+3/ run -d (detach to have it run in background) [image]:[version]
+	3.1/ logs [containerID]: to get logs if running in background
+	3.2/ -p [hostport]:[containerport] (to check if it worked for nginx for ex, google localhost:hostport)
+	3.3/ --name [name]: give specific name to the container
+	3.4/ -e : env var 
+	3.5/ --net : network to use
+	3.6/ -v [host directory OR name]:[container directory] : host volume 
+4/ stop [containerID]
+5/ start [containerID]: restart one previously stopped
+6/ build -t [name]:[tag location]: build image from dockerfile 
+7/ network create [name] :
+8/ docker-compose -f [composefile] up: start all containers in the file 
+	8.1/ down: stop the running containers
+
+-------------------------------------------------------
+CONF files
+
+
+
+-------------------------------------------------------
+NGINX 
+
+webserver, link request from kernel to internet
+can serve static content (media files/HTML)
+port 443 = https://     port88 = http:// 
+
+- TLS v1.3:
+authentification du serveur
+confidentialité des données échangées (ou session chiffrée)
+intégrité des données échangées
+authentification du client (option)
+
+
 
